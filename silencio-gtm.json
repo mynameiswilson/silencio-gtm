@@ -1,6 +1,6 @@
 {
     "exportFormatVersion": 1.3,
-    "exportTime": "2015-03-19 13:54:58",
+    "exportTime": "2015-03-25 21:14:14",
     "containerVersion": {
         "accountId": "57967604",
         "containerId": "1105253",
@@ -9,15 +9,15 @@
         "container": {
             "accountId": "57967604",
             "containerId": "1105253",
-            "name": "coloncancerpreventionproject.org",
-            "publicId": "GTM-5WQDBX",
+            "name": "viastudio.com",
+            "publicId": "GTM-XXXXXX",
             "timeZoneCountryId": "US",
             "timeZoneId": "America/Los_Angeles",
             "notes": "",
             "usageContext": [
                 "WEB"
             ],
-            "fingerprint": "1426773185787",
+            "fingerprint": "1427317901900",
             "enabledBuiltInVariable": [
                 "EVENT",
                 "PAGE_HOSTNAME",
@@ -112,7 +112,7 @@
                     {
                         "type": "BOOLEAN",
                         "key": "doubleClick",
-                        "value": "false"
+                        "value": "true"
                     },
                     {
                         "type": "BOOLEAN",
@@ -568,6 +568,70 @@
                     "51",
                     "54"
                 ]
+            },
+            {
+                "accountId": "57967604",
+                "containerId": "1105253",
+                "tagId": "38",
+                "name": "TRACK outbound link clicks",
+                "type": "ua",
+                "liveOnly": false,
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventLabel",
+                        "value": "{{element url}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "Click"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "Outbound Link"
+                    }
+                ],
+                "fingerprint": "0",
+                "firingTriggerId": [
+                    "58"
+                ]
             }
         ],
         "fingerprint": "0",
@@ -807,6 +871,31 @@
                                 "type": "TEMPLATE",
                                 "key": "arg1",
                                 "value": "gtm4wp.downloadClick"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "57967604",
+                "containerId": "1105253",
+                "triggerId": "58",
+                "name": "gtm4wp.outboundClick",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "gtm4wp.outboundClick"
                             }
                         ]
                     }
@@ -1109,7 +1198,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "value",
-                        "value": "UA-xxxxxxx-1"
+                        "value": "UA-xxxxxxxx-1"
                     }
                 ],
                 "fingerprint": "0"
