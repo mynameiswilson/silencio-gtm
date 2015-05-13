@@ -1,36 +1,36 @@
 {
     "exportFormatVersion": 1.3,
-    "exportTime": "2015-03-25 21:14:14",
+    "exportTime": "2015-05-13 16:04:36",
     "containerVersion": {
-        "accountId": "57967604",
-        "containerId": "1105253",
+        "accountId": "21731876",
+        "containerId": "1175712",
         "containerVersionId": "0",
         "deleted": false,
         "container": {
-            "accountId": "57967604",
-            "containerId": "1105253",
-            "name": "viastudio.com",
-            "publicId": "GTM-XXXXXX",
+            "accountId": "21731876",
+            "containerId": "1175712",
+            "name": "Silencio GTM Bootstrap",
+            "publicId": "GTM-WF7D5G",
             "timeZoneCountryId": "US",
             "timeZoneId": "America/Los_Angeles",
             "notes": "",
             "usageContext": [
                 "WEB"
             ],
-            "fingerprint": "1427317901900",
+            "fingerprint": "1431533068495",
             "enabledBuiltInVariable": [
-                "EVENT",
-                "PAGE_HOSTNAME",
                 "PAGE_URL",
-                "PAGE_PATH",
-                "REFERRER"
+                "REFERRER",
+                "PAGE_HOSTNAME",
+                "EVENT",
+                "PAGE_PATH"
             ]
         },
         "tag": [
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "tagId": "28",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "12",
                 "name": "ANALYTICS - 404 tracking",
                 "type": "ua",
                 "liveOnly": false,
@@ -88,13 +88,13 @@
                 ],
                 "fingerprint": "0",
                 "firingTriggerId": [
-                    "44"
+                    "19"
                 ]
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "tagId": "29",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "13",
                 "name": "ANALYTICS - GA Universal",
                 "type": "ua",
                 "liveOnly": false,
@@ -146,9 +146,9 @@
                 ]
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "tagId": "30",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "14",
                 "name": "ANALYTICS - GA Universal VIA.Event",
                 "type": "ua",
                 "liveOnly": false,
@@ -211,13 +211,13 @@
                 ],
                 "fingerprint": "0",
                 "firingTriggerId": [
-                    "45"
+                    "20"
                 ]
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "tagId": "31",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "15",
                 "name": "ANALYTICS - GA Universal VirtualPageview",
                 "type": "ua",
                 "liveOnly": false,
@@ -231,6 +231,42 @@
                         "type": "BOOLEAN",
                         "key": "useHashAutoLink",
                         "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "fieldsToSet",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "page"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{virtualPageURL}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "title"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{virtualPageTitle}}"
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "BOOLEAN",
@@ -265,13 +301,13 @@
                 ],
                 "fingerprint": "0",
                 "firingTriggerId": [
-                    "46"
+                    "21"
                 ]
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "tagId": "32",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "16",
                 "name": "LISTENER Form Submits",
                 "type": "fsl",
                 "liveOnly": false,
@@ -293,9 +329,9 @@
                 ]
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "tagId": "33",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "17",
                 "name": "LISTENER Link Clicks",
                 "type": "lcl",
                 "liveOnly": false,
@@ -317,9 +353,9 @@
                 ]
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "tagId": "36",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "18",
                 "name": "TRACK File downloads",
                 "type": "ua",
                 "liveOnly": false,
@@ -377,13 +413,13 @@
                 ],
                 "fingerprint": "0",
                 "firingTriggerId": [
-                    "50"
+                    "34"
                 ]
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "tagId": "37",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "19",
                 "name": "TRACK Form Submissions",
                 "type": "ua",
                 "liveOnly": false,
@@ -441,13 +477,13 @@
                 ],
                 "fingerprint": "0",
                 "firingTriggerId": [
-                    "57"
+                    "18"
                 ]
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "tagId": "34",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "20",
                 "name": "TRACK Scroll Tracking - Reader Type",
                 "type": "ua",
                 "liveOnly": false,
@@ -500,13 +536,13 @@
                 ],
                 "fingerprint": "0",
                 "firingTriggerId": [
-                    "53"
+                    "29"
                 ]
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "tagId": "35",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "21",
                 "name": "TRACK Scroll Tracking - Scroll Distance",
                 "type": "ua",
                 "liveOnly": false,
@@ -564,15 +600,79 @@
                 ],
                 "fingerprint": "0",
                 "firingTriggerId": [
-                    "52",
-                    "51",
-                    "54"
+                    "28",
+                    "27",
+                    "30"
                 ]
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "tagId": "38",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "23",
+                "name": "TRACK email clicks",
+                "type": "ua",
+                "liveOnly": false,
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventLabel",
+                        "value": "{{url path}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "{{element url}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "Email Link Click"
+                    }
+                ],
+                "fingerprint": "0",
+                "firingTriggerId": [
+                    "33"
+                ]
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "22",
                 "name": "TRACK outbound link clicks",
                 "type": "ua",
                 "liveOnly": false,
@@ -630,16 +730,16 @@
                 ],
                 "fingerprint": "0",
                 "firingTriggerId": [
-                    "58"
+                    "35"
                 ]
             }
         ],
         "fingerprint": "0",
         "trigger": [
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "43",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "17",
                 "name": "All pages",
                 "type": "PAGEVIEW",
                 "filter": [
@@ -662,9 +762,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "57",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "18",
                 "name": "Form Submissions",
                 "type": "FORM_SUBMISSION",
                 "waitForTags": {
@@ -686,9 +786,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "44",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "19",
                 "name": "Page Title starts with Page Not Found",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -720,7 +820,7 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "Page not found"
+                                "value": "Page Not Found"
                             }
                         ]
                     }
@@ -728,9 +828,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "45",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "20",
                 "name": "VIA.Event",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -753,9 +853,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "46",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "21",
                 "name": "VIA.VirtualPageview",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -778,17 +878,17 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "47",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "22",
                 "name": "Wait for DOM Load",
                 "type": "DOM_READY",
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "48",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "23",
                 "name": "btn class clicks",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -828,9 +928,64 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "49",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "34",
+                "name": "download link click",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Element URL Path}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "\\.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|gz|tar)$"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "ignore_case",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "33",
+                "name": "email link click",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "STARTS_WITH",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{element url}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "mailto:"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "24",
                 "name": "form submission",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -853,9 +1008,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "50",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "25",
                 "name": "gtm4wp.downloadClick",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -878,9 +1033,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "58",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "26",
                 "name": "gtm4wp.outboundClick",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -903,9 +1058,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "51",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "27",
                 "name": "gtm4wp.reading.contentBottom",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -928,9 +1083,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "52",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "28",
                 "name": "gtm4wp.reading.pagebottom",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -953,9 +1108,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "53",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "29",
                 "name": "gtm4wp.reading.readerType",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -978,9 +1133,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "54",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "30",
                 "name": "gtm4wp.reading.startReading",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -1003,9 +1158,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "55",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "31",
                 "name": "menu-primary link click",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -1045,9 +1200,39 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "triggerId": "56",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "35",
+                "name": "outbound link click",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Element URL Hostname}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "viastudio.com"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "32",
                 "name": "secondary menu click",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -1089,9 +1274,73 @@
         ],
         "variable": [
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "97",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "61",
+                "name": "404 Page Title",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "page not found"
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "63",
+                "name": "Element URL Hostname",
+                "type": "aev",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "stripWww",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "HOST"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "varType",
+                        "value": "URL"
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "62",
+                "name": "Element URL Path",
+                "type": "aev",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "defaultPages"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "PATH"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "varType",
+                        "value": "URL"
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "37",
                 "name": "Event Action",
                 "type": "v",
                 "parameter": [
@@ -1109,9 +1358,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "98",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "38",
                 "name": "Event Category",
                 "type": "v",
                 "parameter": [
@@ -1129,9 +1378,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "99",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "39",
                 "name": "Event Interaction",
                 "type": "v",
                 "parameter": [
@@ -1149,9 +1398,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "100",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "40",
                 "name": "Event Label",
                 "type": "v",
                 "parameter": [
@@ -1169,9 +1418,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "101",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "41",
                 "name": "Event Value",
                 "type": "v",
                 "parameter": [
@@ -1189,9 +1438,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "102",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "42",
                 "name": "Google Analytics UA",
                 "type": "c",
                 "parameter": [
@@ -1204,9 +1453,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "94",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "34",
                 "name": "element",
                 "type": "aev",
                 "parameter": [
@@ -1219,9 +1468,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "95",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "35",
                 "name": "element ancestor is menu-primary",
                 "type": "jsm",
                 "parameter": [
@@ -1234,9 +1483,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "96",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "36",
                 "name": "element ancestor is secondary",
                 "type": "jsm",
                 "parameter": [
@@ -1249,9 +1498,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "93",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "33",
                 "name": "element classes",
                 "type": "aev",
                 "parameter": [
@@ -1264,9 +1513,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "103",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "43",
                 "name": "element id",
                 "type": "aev",
                 "parameter": [
@@ -1279,9 +1528,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "104",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "44",
                 "name": "element target",
                 "type": "aev",
                 "parameter": [
@@ -1294,9 +1543,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "105",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "45",
                 "name": "element text",
                 "type": "aev",
                 "parameter": [
@@ -1309,9 +1558,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "106",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "46",
                 "name": "element url",
                 "type": "aev",
                 "parameter": [
@@ -1324,17 +1573,17 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "107",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "47",
                 "name": "event",
                 "type": "e",
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "108",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "48",
                 "name": "history change source",
                 "type": "aev",
                 "parameter": [
@@ -1347,9 +1596,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "109",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "49",
                 "name": "history new state",
                 "type": "aev",
                 "parameter": [
@@ -1362,9 +1611,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "110",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "50",
                 "name": "history new url fragment",
                 "type": "aev",
                 "parameter": [
@@ -1377,9 +1626,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "111",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "51",
                 "name": "history old state",
                 "type": "aev",
                 "parameter": [
@@ -1392,9 +1641,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "112",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "52",
                 "name": "history old url fragment",
                 "type": "aev",
                 "parameter": [
@@ -1407,9 +1656,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "113",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "53",
                 "name": "linkhref",
                 "type": "v",
                 "parameter": [
@@ -1427,9 +1676,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "92",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "32",
                 "name": "page title",
                 "type": "j",
                 "parameter": [
@@ -1442,9 +1691,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "114",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "54",
                 "name": "readerType",
                 "type": "v",
                 "parameter": [
@@ -1462,17 +1711,17 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "115",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "55",
                 "name": "referrer",
                 "type": "f",
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "116",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "56",
                 "name": "timeToScroll",
                 "type": "v",
                 "parameter": [
@@ -1490,9 +1739,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "91",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "31",
                 "name": "url",
                 "type": "u",
                 "parameter": [
@@ -1505,9 +1754,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "117",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "57",
                 "name": "url hostname",
                 "type": "u",
                 "parameter": [
@@ -1520,9 +1769,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "118",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "58",
                 "name": "url path",
                 "type": "u",
                 "parameter": [
@@ -1535,9 +1784,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "119",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "59",
                 "name": "virtualPageTitle",
                 "type": "v",
                 "parameter": [
@@ -1555,9 +1804,9 @@
                 "fingerprint": "0"
             },
             {
-                "accountId": "57967604",
-                "containerId": "1105253",
-                "variableId": "120",
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "60",
                 "name": "virtualPageURL",
                 "type": "v",
                 "parameter": [
