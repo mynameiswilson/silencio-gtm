@@ -1,6 +1,6 @@
 {
     "exportFormatVersion": 1.3,
-    "exportTime": "2015-05-13 16:04:36",
+    "exportTime": "2015-05-13 16:17:36",
     "containerVersion": {
         "accountId": "21731876",
         "containerId": "1175712",
@@ -17,7 +17,7 @@
             "usageContext": [
                 "WEB"
             ],
-            "fingerprint": "1431533068495",
+            "fingerprint": "1431533842284",
             "enabledBuiltInVariable": [
                 "PAGE_URL",
                 "REFERRER",
@@ -393,7 +393,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "eventLabel",
-                        "value": "{{linkhref}}"
+                        "value": "{{url path}}"
                     },
                     {
                         "type": "BOOLEAN",
@@ -403,7 +403,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "eventAction",
-                        "value": "{{url path}}"
+                        "value": "{{element url}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -710,7 +710,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "eventLabel",
-                        "value": "{{element url}}"
+                        "value": "{{url path}}"
                     },
                     {
                         "type": "BOOLEAN",
@@ -720,12 +720,12 @@
                     {
                         "type": "TEMPLATE",
                         "key": "eventAction",
-                        "value": "Click"
+                        "value": "{{element url}}"
                     },
                     {
                         "type": "TEMPLATE",
                         "key": "eventCategory",
-                        "value": "Outbound Link"
+                        "value": "Outbound Link Click"
                     }
                 ],
                 "fingerprint": "0",

@@ -18,16 +18,8 @@ Voila!
 Our stock configuration includes configuration to track the following:
 
 * Basic Google Analytics pageviews
-* Events generated from the "Google Tag Manager for Wordpress" plugin (http://www.duracelltomi.com/google-tag-manager-for-wordpress/)
 * Events from our custom VIA.Event and VIA.VirtualPageView
-
-### Events Generated from "Google Tag Manager for Wordpress" plugin
-
-* File downloads
-* Scroll Tracking
-* Outbound link tracking
-
->Note these events must be enabled in the plugin settings to be received as events in Google Analytics.
+* Outbound, email and download click events
 
 ### Custom VIA.Event and VIA.VirtualPageViews Events
 
@@ -56,3 +48,32 @@ dataLayer.push({
      'virtualPageTitle' : 'Plan Your Visit - Contact Us - Thank You'
      });
 ```
+
+### Outbound, email and download events
+
+#### Outbound
+
+Any click that goes to a URL that does not have your domain name will fire an event to Google Analytics:
+
+Category: Outbound Link Click
+Action: {{element url}}
+Label: {{url path}} (page on site where click occurred)
+
+Note: You need to change the "outbound link click" trigger to test against your own domain. By default, it is set to viastudio.com
+
+#### Email 
+
+Any click that goes to a URL that begins with "mailto:" will fire an event to Google Analytics:
+
+Category: Email Link Click
+Action: {{element url}}
+Label: {{url path}} (page on site where click occurred)
+
+#### Download
+
+Any click that goes to a path that matches the following Regex: \.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|gz|tar)$ 
+... will fire an event to Google Analytics:
+
+Category: File Download 
+Action: {{element url}}
+Label: {{url path}} (page on site where click occurred)
