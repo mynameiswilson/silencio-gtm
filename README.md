@@ -56,7 +56,9 @@ dataLayer.push({
 Any click that goes to a URL that does not have your domain name will fire an event to Google Analytics:
 
 Category: Outbound Link Click
+
 Action: {{element url}}
+
 Label: {{url path}} (page on site where click occurred)
 
 Note: You need to change the "outbound link click" trigger to test against your own domain. By default, it is set to viastudio.com
@@ -66,7 +68,9 @@ Note: You need to change the "outbound link click" trigger to test against your 
 Any click that goes to a URL that begins with "mailto:" will fire an event to Google Analytics:
 
 Category: Email Link Click
+
 Action: {{element url}}
+
 Label: {{url path}} (page on site where click occurred)
 
 #### Download
@@ -75,5 +79,7 @@ Any click that goes to a path that matches the following Regex: \.(pdf|doc|docx|
 ... will fire an event to Google Analytics:
 
 Category: File Download 
+
 Action: {{element url}}
+
 Label: {{url path}} (page on site where click occurred)
