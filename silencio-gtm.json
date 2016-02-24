@@ -1,6 +1,6 @@
 {
     "exportFormatVersion": 1.3,
-    "exportTime": "2015-05-13 16:17:36",
+    "exportTime": "2016-02-24 15:02:30",
     "containerVersion": {
         "accountId": "21731876",
         "containerId": "1175712",
@@ -17,7 +17,7 @@
             "usageContext": [
                 "WEB"
             ],
-            "fingerprint": "1431533842284",
+            "fingerprint": "1456326131575",
             "enabledBuiltInVariable": [
                 "PAGE_URL",
                 "REFERRER",
@@ -37,7 +37,7 @@
                 "parameter": [
                     {
                         "type": "BOOLEAN",
-                        "key": "enableEcommerce",
+                        "key": "nonInteraction",
                         "value": "false"
                     },
                     {
@@ -52,23 +52,13 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
+                        "key": "eventCategory",
+                        "value": "404"
                     },
                     {
                         "type": "TEMPLATE",
                         "key": "trackType",
                         "value": "TRACK_EVENT"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "nonInteraction",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "eventLabel",
-                        "value": "{{Referrer}}"
                     },
                     {
                         "type": "BOOLEAN",
@@ -82,8 +72,18 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "eventCategory",
-                        "value": "404"
+                        "key": "eventLabel",
+                        "value": "{{Referrer}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
                     }
                 ],
                 "fingerprint": "0",
@@ -101,16 +101,6 @@
                 "parameter": [
                     {
                         "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "useHashAutoLink",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
                         "key": "doubleClick",
                         "value": "true"
                     },
@@ -120,24 +110,34 @@
                         "value": "false"
                     },
                     {
-                        "type": "BOOLEAN",
-                        "key": "decorateFormsAutoLink",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
-                    },
-                    {
                         "type": "TEMPLATE",
                         "key": "trackType",
                         "value": "TRACK_PAGEVIEW"
                     },
                     {
                         "type": "BOOLEAN",
+                        "key": "useHashAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
                         "key": "enableLinkId",
                         "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decorateFormsAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
                     }
                 ],
                 "fingerprint": "0",
@@ -155,13 +155,8 @@
                 "parameter": [
                     {
                         "type": "BOOLEAN",
-                        "key": "enableEcommerce",
+                        "key": "nonInteraction",
                         "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "eventValue",
-                        "value": "{{Event Value}}"
                     },
                     {
                         "type": "BOOLEAN",
@@ -175,23 +170,18 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
+                        "key": "eventValue",
+                        "value": "{{Event Value}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "{{Event Category}}"
                     },
                     {
                         "type": "TEMPLATE",
                         "key": "trackType",
                         "value": "TRACK_EVENT"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "nonInteraction",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "eventLabel",
-                        "value": "{{Event Label}}"
                     },
                     {
                         "type": "BOOLEAN",
@@ -205,8 +195,18 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "eventCategory",
-                        "value": "{{Event Category}}"
+                        "key": "eventLabel",
+                        "value": "{{Event Label}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
                     }
                 ],
                 "fingerprint": "0",
@@ -224,12 +224,12 @@
                 "parameter": [
                     {
                         "type": "BOOLEAN",
-                        "key": "enableEcommerce",
+                        "key": "doubleClick",
                         "value": "false"
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "useHashAutoLink",
+                        "key": "useDebugVersion",
                         "value": "false"
                     },
                     {
@@ -269,13 +269,18 @@
                         ]
                     },
                     {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_PAGEVIEW"
+                    },
+                    {
                         "type": "BOOLEAN",
-                        "key": "doubleClick",
+                        "key": "useHashAutoLink",
                         "value": "false"
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "useDebugVersion",
+                        "key": "enableLinkId",
                         "value": "false"
                     },
                     {
@@ -284,19 +289,14 @@
                         "value": "false"
                     },
                     {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
                         "type": "TEMPLATE",
                         "key": "trackingId",
                         "value": "{{Google Analytics UA}}"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "trackType",
-                        "value": "TRACK_PAGEVIEW"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
                     }
                 ],
                 "fingerprint": "0",
@@ -307,50 +307,27 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "16",
-                "name": "LISTENER Form Submits",
-                "type": "fsl",
+                "tagId": "24",
+                "name": "LISTENER YouTube Events",
+                "type": "html",
                 "liveOnly": false,
                 "parameter": [
                     {
-                        "type": "BOOLEAN",
-                        "key": "checkValidation",
-                        "value": "false"
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!--\nhttp://www.cardinalpath.com/youtube-video-tracking-with-google-tag-manager-v2-and-universal-analytics-a-step-by-step-guide/\n\nGoogle Analytics Tag Manager (V2) custom HTML tag for YouTube video tracking\n\nCopyright 2015, Cardinal Path, Inc.\n\nOriginal author: Stephane Hamel <shamel@cardinalpath.com>\nRevised by: Nicky Yuen <nyuen@cardinalpath.com>\n\nVersion 1.0\n-->\n<script type=\"text/javascript\">\n\t// support multiple players on the same page\n\tvar gtmYTPlayers = [];\n\t\n    // OPTIONAL: Enable JSAPI if it's not already on the URL\n    // note: this will cause the YouTube player to \"flash\" on the page when reloading to enable the JS API\n    for (var e = document.getElementsByTagName(\"iframe\"), x = e.length; x--;)\n        if (/youtube.com\\/embed/.test(e[x].src))\n            if (e[x].src.indexOf('enablejsapi=') === -1)\n                e[x].src += (e[x].src.indexOf('?') === -1 ? '?' : '&') + 'enablejsapi=1';\n\t\t\n\t/**\n\t * Attaches listener once the YouTube API is loaded\t\n\t**/\n    function onYouTubeIframeAPIReady() {\n        for (var e = document.getElementsByTagName(\"iframe\"), x = e.length; x--;) {\n            if (/youtube.com\\/embed/.test(e[x].src)) {\n                gtmYTPlayers.push(new YT.Player(e[x], {\n                    events: {\n                        onStateChange: onPlayerStateChange,\n                        onError: onPlayerError\n                    }\n                }));\n                YT.gtmLastAction = \"p\";\n            }\n        }\n    }\n\n\t/**\n\t * Listen for play/pause. Other states such as rewind and end could also be added\n     * Also report % played every second\n\t * @param e - event\n\t**/\n    function onPlayerStateChange(e) {\n        e[\"data\"] == YT.PlayerState.PLAYING && setTimeout(onPlayerPercent, 1000, e[\"target\"]);\n        var video_data = e.target[\"getVideoData\"](),\n            label = video_data.video_id + ':' + video_data.title;\n        if (e[\"data\"] == YT.PlayerState.PLAYING && YT.gtmLastAction == \"p\") {\n            dataLayer.push({\n                event: 'youtube',\n                eventCategory: 'youtube',\n\t\t\t\teventAction: 'play',\n                eventLabel: label\n            });\n            YT.gtmLastAction = \"\";\n        }\n        if (e[\"data\"] == YT.PlayerState.PAUSED) {\n            dataLayer.push({\n                event: 'youtube',\n                eventCategory: 'youtube',\n\t\t\t\teventAction: 'pause',\n                eventLabel: label\n            });\n            YT.gtmLastAction = \"p\";\n        }\n    }\n\n\t/**\n\t * Catch all to report errors through the GTM data layer. once the error is exposed to GTM, it can be tracked in UA as an event!\n\t * Refer to https://developers.google.com/youtube/js_api_reference#Events onError\n\t * @param: e (event)\n\t**/\n    \n    function onPlayerError(e) {\n        dataLayer.push({\n            event: 'error',\n\t\t\teventCategory: 'youtube',\n\t\t\teventAction: 'play',\n            eventLabel: 'youtube: ' + e\n        })\n    }\n\n\t/**\n\t * Report the % played if it matches 0%, 25%, 50%, 75%, 90% or completed\n\t * @param: e (event)\n\t**/\n    function onPlayerPercent(e) {\n        if (e[\"getPlayerState\"]() == YT.PlayerState.PLAYING) {\n            //var t = e[\"getDuration\"]() - e[\"getCurrentTime\"]() <= 1.5 ? 1 : (Math.floor(e[\"getCurrentTime\"]() / e[\"getDuration\"]() * 4) / 4).toFixed(2);\n            \n            // Set the played duration to every tenth because we'll need to also capture 90% played.\n            var t = e[\"getDuration\"]() - e[\"getCurrentTime\"]() <= 1.5 ? 1 : (Math.floor(e[\"getCurrentTime\"]() / e[\"getDuration\"]() * 10) / 10).toFixed(2);\n            \n            if (parseFloat(t) < 0.25) {\n                t = 0.00;\n            }\n            else if (parseFloat(t) < 0.5){\n                t = 0.25;\n            }\n            else if (parseFloat(t) < 0.75){\n                t = 0.50;\n            }\n            else if (parseFloat(t) < 0.9){\n                t = 0.75;\n            }\n            else if (parseFloat(t) < 1){\n                t = 0.90;\n            }\n            // duration t needs to be fixed to 2 decimal places\n            t = t.toFixed(2);\n            \n            if (!e[\"lastP\"] || t > e[\"lastP\"]) {\n                var video_data = e[\"getVideoData\"](),\n                    label = video_data.video_id + ':' + video_data.title;\n                e[\"lastP\"] = t;\n                dataLayer.push({\n                    event: \"youtube\",\n                    eventCategory: 'youtube',\n                    eventAction: t * 100 + \"%\",\n                    eventLabel: label\n                })\n            }\n            e[\"lastP\"] != 1 && setTimeout(onPlayerPercent, 1000, e);\n        }\n    }\n\t\n\t/**\n\t * Add unload event listener\n\t**/\n\twindow.addEventListener('beforeunload', function(e){\n\t\tfor (var i = 0; i < gtmYTPlayers.length; i++){\n\t\t\tif (gtmYTPlayers[i].getPlayerState() === 1) { // playing\n\t\t\t\tvar video_data = gtmYTPlayers[i]['getVideoData'](),\n\t\t\t\tlabel = video_data.video_id + ':' + video_data.title;\n\t\t\t\t\n\t\t\t\tdataLayer.push({\n\t\t\t\t\tevent: 'youtube',\n\t\t\t\t\teventCategory: 'youtube',\n\t\t\t\t\teventAction: 'exit',\n\t\t\t\t\teventLabel: label\n\t\t\t\t});\n\t\t\t}\n\t\t}\n\t})\n    \n\t// load the Youtube JS api and get going\n    var j = document.createElement(\"script\"),\n        f = document.getElementsByTagName(\"script\")[0];\n    j.src = \"//www.youtube.com/iframe_api\";\n    j.async = true;\n    f.parentNode.insertBefore(j, f);\n</script>"
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "waitForTags",
+                        "key": "supportDocumentWrite",
                         "value": "false"
                     }
                 ],
                 "fingerprint": "0",
                 "firingTriggerId": [
-                    "2147479553"
-                ]
-            },
-            {
-                "accountId": "21731876",
-                "containerId": "1175712",
-                "tagId": "17",
-                "name": "LISTENER Link Clicks",
-                "type": "lcl",
-                "liveOnly": false,
-                "parameter": [
-                    {
-                        "type": "BOOLEAN",
-                        "key": "checkValidation",
-                        "value": "true"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "waitForTags",
-                        "value": "false"
-                    }
+                    "39"
                 ],
-                "fingerprint": "0",
-                "firingTriggerId": [
-                    "2147479553"
-                ]
+                "tagFiringOption": "ONCE_PER_EVENT"
             },
             {
                 "accountId": "21731876",
@@ -362,7 +339,7 @@
                 "parameter": [
                     {
                         "type": "BOOLEAN",
-                        "key": "enableEcommerce",
+                        "key": "nonInteraction",
                         "value": "false"
                     },
                     {
@@ -377,23 +354,13 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
+                        "key": "eventCategory",
+                        "value": "File Download"
                     },
                     {
                         "type": "TEMPLATE",
                         "key": "trackType",
                         "value": "TRACK_EVENT"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "nonInteraction",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "eventLabel",
-                        "value": "{{url path}}"
                     },
                     {
                         "type": "BOOLEAN",
@@ -407,8 +374,18 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "eventCategory",
-                        "value": "File Download"
+                        "key": "eventLabel",
+                        "value": "{{url path}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
                     }
                 ],
                 "fingerprint": "0",
@@ -426,7 +403,7 @@
                 "parameter": [
                     {
                         "type": "BOOLEAN",
-                        "key": "enableEcommerce",
+                        "key": "nonInteraction",
                         "value": "false"
                     },
                     {
@@ -441,23 +418,13 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
+                        "key": "eventCategory",
+                        "value": "Form Submission"
                     },
                     {
                         "type": "TEMPLATE",
                         "key": "trackType",
                         "value": "TRACK_EVENT"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "nonInteraction",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "eventLabel",
-                        "value": "{{element url}}"
                     },
                     {
                         "type": "BOOLEAN",
@@ -471,8 +438,18 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "eventCategory",
-                        "value": "Form Submission"
+                        "key": "eventLabel",
+                        "value": "{{element url}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
                     }
                 ],
                 "fingerprint": "0",
@@ -490,8 +467,8 @@
                 "parameter": [
                     {
                         "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
+                        "key": "nonInteraction",
+                        "value": "true"
                     },
                     {
                         "type": "BOOLEAN",
@@ -500,23 +477,13 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
+                        "key": "eventCategory",
+                        "value": "Scroll Tracking"
                     },
                     {
                         "type": "TEMPLATE",
                         "key": "trackType",
                         "value": "TRACK_EVENT"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "nonInteraction",
-                        "value": "true"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "eventLabel",
-                        "value": "{{readerType}}"
                     },
                     {
                         "type": "BOOLEAN",
@@ -530,8 +497,18 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "eventCategory",
-                        "value": "Scroll Tracking"
+                        "key": "eventLabel",
+                        "value": "{{readerType}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
                     }
                 ],
                 "fingerprint": "0",
@@ -549,13 +526,8 @@
                 "parameter": [
                     {
                         "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "eventValue",
-                        "value": "{{timeToScroll}}"
+                        "key": "nonInteraction",
+                        "value": "true"
                     },
                     {
                         "type": "BOOLEAN",
@@ -564,23 +536,18 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
+                        "key": "eventValue",
+                        "value": "{{timeToScroll}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "Scroll Tracking"
                     },
                     {
                         "type": "TEMPLATE",
                         "key": "trackType",
                         "value": "TRACK_EVENT"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "nonInteraction",
-                        "value": "true"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "eventLabel",
-                        "value": "{{event}}"
                     },
                     {
                         "type": "BOOLEAN",
@@ -594,8 +561,18 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "eventCategory",
-                        "value": "Scroll Tracking"
+                        "key": "eventLabel",
+                        "value": "{{event}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
                     }
                 ],
                 "fingerprint": "0",
@@ -608,6 +585,102 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
+                "tagId": "25",
+                "name": "TRACK YouTube Events",
+                "type": "ua",
+                "liveOnly": false,
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "nonInteraction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "YouTube"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "{{Event Action}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventLabel",
+                        "value": "{{Event Label}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setTrackerName",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventValue",
+                        "value": "{{Event Value}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "fieldsToSet",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "useBeacon"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "true"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
+                    }
+                ],
+                "fingerprint": "0",
+                "firingTriggerId": [
+                    "39"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
                 "tagId": "23",
                 "name": "TRACK email clicks",
                 "type": "ua",
@@ -615,7 +688,7 @@
                 "parameter": [
                     {
                         "type": "BOOLEAN",
-                        "key": "enableEcommerce",
+                        "key": "nonInteraction",
                         "value": "false"
                     },
                     {
@@ -630,23 +703,13 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
+                        "key": "eventCategory",
+                        "value": "Email Link Click"
                     },
                     {
                         "type": "TEMPLATE",
                         "key": "trackType",
                         "value": "TRACK_EVENT"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "nonInteraction",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "eventLabel",
-                        "value": "{{url path}}"
                     },
                     {
                         "type": "BOOLEAN",
@@ -660,14 +723,25 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "eventCategory",
-                        "value": "Email Link Click"
+                        "key": "eventLabel",
+                        "value": "{{url path}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
                     }
                 ],
                 "fingerprint": "0",
                 "firingTriggerId": [
                     "33"
-                ]
+                ],
+                "tagFiringOption": "UNLIMITED"
             },
             {
                 "accountId": "21731876",
@@ -679,7 +753,7 @@
                 "parameter": [
                     {
                         "type": "BOOLEAN",
-                        "key": "enableEcommerce",
+                        "key": "nonInteraction",
                         "value": "false"
                     },
                     {
@@ -694,23 +768,13 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
+                        "key": "eventCategory",
+                        "value": "Outbound Link Click"
                     },
                     {
                         "type": "TEMPLATE",
                         "key": "trackType",
                         "value": "TRACK_EVENT"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "nonInteraction",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "eventLabel",
-                        "value": "{{url path}}"
                     },
                     {
                         "type": "BOOLEAN",
@@ -724,8 +788,18 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "eventCategory",
-                        "value": "Outbound Link Click"
+                        "key": "eventLabel",
+                        "value": "{{url path}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
                     }
                 ],
                 "fingerprint": "0",
@@ -759,7 +833,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237398"
             },
             {
                 "accountId": "21731876",
@@ -783,7 +857,7 @@
                     "type": "TEMPLATE",
                     "value": ""
                 },
-                "fingerprint": "0"
+                "fingerprint": "1429296237398"
             },
             {
                 "accountId": "21731876",
@@ -825,7 +899,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1430419563927"
             },
             {
                 "accountId": "21731876",
@@ -850,7 +924,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237399"
             },
             {
                 "accountId": "21731876",
@@ -875,7 +949,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237399"
             },
             {
                 "accountId": "21731876",
@@ -883,7 +957,49 @@
                 "triggerId": "22",
                 "name": "Wait for DOM Load",
                 "type": "DOM_READY",
-                "fingerprint": "0"
+                "fingerprint": "1429296237399"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "39",
+                "name": "YouTube is Present",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "gtm.dom"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{YouTube is Present}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1456266754478"
             },
             {
                 "accountId": "21731876",
@@ -925,7 +1041,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237400"
             },
             {
                 "accountId": "21731876",
@@ -955,7 +1071,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1431533025230"
             },
             {
                 "accountId": "21731876",
@@ -980,7 +1096,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1431533035109"
             },
             {
                 "accountId": "21731876",
@@ -1005,7 +1121,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237400"
             },
             {
                 "accountId": "21731876",
@@ -1030,7 +1146,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237400"
             },
             {
                 "accountId": "21731876",
@@ -1055,7 +1171,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237400"
             },
             {
                 "accountId": "21731876",
@@ -1080,7 +1196,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237400"
             },
             {
                 "accountId": "21731876",
@@ -1105,7 +1221,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237401"
             },
             {
                 "accountId": "21731876",
@@ -1130,7 +1246,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237401"
             },
             {
                 "accountId": "21731876",
@@ -1155,7 +1271,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237401"
             },
             {
                 "accountId": "21731876",
@@ -1197,7 +1313,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237402"
             },
             {
                 "accountId": "21731876",
@@ -1227,7 +1343,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1431533043438"
             },
             {
                 "accountId": "21731876",
@@ -1269,7 +1385,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237403"
             }
         ],
         "variable": [
@@ -1302,13 +1418,13 @@
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "component",
-                        "value": "HOST"
+                        "key": "varType",
+                        "value": "URL"
                     },
                     {
                         "type": "TEMPLATE",
-                        "key": "varType",
-                        "value": "URL"
+                        "key": "component",
+                        "value": "HOST"
                     }
                 ],
                 "fingerprint": "0"
@@ -1321,8 +1437,9 @@
                 "type": "aev",
                 "parameter": [
                     {
-                        "type": "LIST",
-                        "key": "defaultPages"
+                        "type": "TEMPLATE",
+                        "key": "varType",
+                        "value": "URL"
                     },
                     {
                         "type": "TEMPLATE",
@@ -1330,9 +1447,8 @@
                         "value": "PATH"
                     },
                     {
-                        "type": "TEMPLATE",
-                        "key": "varType",
-                        "value": "URL"
+                        "type": "LIST",
+                        "key": "defaultPages"
                     }
                 ],
                 "fingerprint": "0"
@@ -1345,14 +1461,14 @@
                 "type": "v",
                 "parameter": [
                     {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "eventAction"
-                    },
-                    {
                         "type": "INTEGER",
                         "key": "dataLayerVersion",
                         "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventAction"
                     }
                 ],
                 "fingerprint": "0"
@@ -1365,14 +1481,14 @@
                 "type": "v",
                 "parameter": [
                     {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "eventCategory"
-                    },
-                    {
                         "type": "INTEGER",
                         "key": "dataLayerVersion",
                         "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventCategory"
                     }
                 ],
                 "fingerprint": "0"
@@ -1385,14 +1501,14 @@
                 "type": "v",
                 "parameter": [
                     {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "eventInteraction"
-                    },
-                    {
                         "type": "INTEGER",
                         "key": "dataLayerVersion",
                         "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventInteraction"
                     }
                 ],
                 "fingerprint": "0"
@@ -1405,14 +1521,14 @@
                 "type": "v",
                 "parameter": [
                     {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "eventLabel"
-                    },
-                    {
                         "type": "INTEGER",
                         "key": "dataLayerVersion",
                         "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventLabel"
                     }
                 ],
                 "fingerprint": "0"
@@ -1425,14 +1541,14 @@
                 "type": "v",
                 "parameter": [
                     {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "eventValue"
-                    },
-                    {
                         "type": "INTEGER",
                         "key": "dataLayerVersion",
                         "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventValue"
                     }
                 ],
                 "fingerprint": "0"
@@ -1448,6 +1564,21 @@
                         "type": "TEMPLATE",
                         "key": "value",
                         "value": "UA-xxxxxxxx-1"
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "64",
+                "name": "YouTube is Present",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "// Return \"true\" if there is at least one YouTube video on the page\nfunction () {\n   for (var e = document.getElementsByTagName('iframe'), x = e.length; x--;)\n   if (/youtube.com\\/embed/.test(e[x].src)){\n      return true;\n   }\n   return false;\n}"
                     }
                 ],
                 "fingerprint": "0"
@@ -1663,14 +1794,14 @@
                 "type": "v",
                 "parameter": [
                     {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "linkhref"
-                    },
-                    {
                         "type": "INTEGER",
                         "key": "dataLayerVersion",
                         "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "linkhref"
                     }
                 ],
                 "fingerprint": "0"
@@ -1698,14 +1829,14 @@
                 "type": "v",
                 "parameter": [
                     {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "readerType"
-                    },
-                    {
                         "type": "INTEGER",
                         "key": "dataLayerVersion",
                         "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "readerType"
                     }
                 ],
                 "fingerprint": "0"
@@ -1726,14 +1857,14 @@
                 "type": "v",
                 "parameter": [
                     {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "timeToScroll"
-                    },
-                    {
                         "type": "INTEGER",
                         "key": "dataLayerVersion",
                         "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "timeToScroll"
                     }
                 ],
                 "fingerprint": "0"
@@ -1791,14 +1922,14 @@
                 "type": "v",
                 "parameter": [
                     {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "virtualPageTitle"
-                    },
-                    {
                         "type": "INTEGER",
                         "key": "dataLayerVersion",
                         "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "virtualPageTitle"
                     }
                 ],
                 "fingerprint": "0"
@@ -1811,14 +1942,14 @@
                 "type": "v",
                 "parameter": [
                     {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "virtualPageURL"
-                    },
-                    {
                         "type": "INTEGER",
                         "key": "dataLayerVersion",
                         "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "virtualPageURL"
                     }
                 ],
                 "fingerprint": "0"
