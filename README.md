@@ -89,7 +89,9 @@ Label: {{url path}} (page on site where click occurred)
 If a YouTube embed is detected on the page, we will automatically begin tracking and reporting events.
 
 Category: 'youtube'
+
 Action: 'play', 'pause', 0%, 25%, 50%, 75%, 90%, 100%
+
 Label: title of video
 
 Adapted from this article: http://www.cardinalpath.com/youtube-video-tracking-with-google-tag-manager-v2-and-universal-analytics-a-step-by-step-guide/
