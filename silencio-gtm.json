@@ -1,6 +1,6 @@
 {
     "exportFormatVersion": 1.3,
-    "exportTime": "2016-02-24 15:02:30",
+    "exportTime": "2016-05-13 19:19:14",
     "containerVersion": {
         "accountId": "21731876",
         "containerId": "1175712",
@@ -13,11 +13,11 @@
             "publicId": "GTM-WF7D5G",
             "timeZoneCountryId": "US",
             "timeZoneId": "America/Los_Angeles",
-            "notes": "",
+            "notes": "- UserID tracking: added visitorId datalayer variable and added &uid -> {{visitorId}} in GA tag \"fields to set\"",
             "usageContext": [
                 "WEB"
             ],
-            "fingerprint": "1456326131575",
+            "fingerprint": "1463167146155",
             "enabledBuiltInVariable": [
                 "PAGE_URL",
                 "REFERRER",
@@ -106,7 +106,38 @@
                     },
                     {
                         "type": "BOOLEAN",
+                        "key": "setTrackerName",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
                         "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "fieldsToSet",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "&uid"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{visitorId}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useHashAutoLink",
                         "value": "false"
                     },
                     {
@@ -116,17 +147,12 @@
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "useHashAutoLink",
+                        "key": "decorateFormsAutoLink",
                         "value": "false"
                     },
                     {
                         "type": "BOOLEAN",
                         "key": "enableLinkId",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "decorateFormsAutoLink",
                         "value": "false"
                     },
                     {
@@ -143,7 +169,8 @@
                 "fingerprint": "0",
                 "firingTriggerId": [
                     "2147479553"
-                ]
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
             },
             {
                 "accountId": "21731876",
@@ -307,6 +334,31 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
+                "tagId": "26",
+                "name": "LISTENER Scroll Depth Percentage",
+                "type": "html",
+                "liveOnly": false,
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n/*!\n * @preserve\n * jquery.scrolldepth.js | v0.9.1\n * Copyright (c) 2016 Rob Flaherty (@robflaherty)\n * Licensed under the MIT and GPL licenses.\n */\n\n/* Universal module definition */\n\n(function(factory) {\n  if (typeof define === 'function' && define.amd) {\n    // AMD\n    define(['jquery'], factory);\n  } else if (typeof module === 'object' && module.exports) {\n    // CommonJS\n    module.exports = factory(require('jquery'));\n  } else {\n    // Browser globals\n    factory(jQuery);\n  }\n}(function($) {\n\n/* Scroll Depth */\n\n    \"use strict\";\n\n    var defaults = {\n      minHeight: 0,\n      elements: [],\n      percentage: true,\n      userTiming: true,\n      pixelDepth: true,\n      nonInteraction: true,\n      gaGlobal: false,\n      gtmOverride: false\n    };\n\n    var $window = $(window),\n      cache = [],\n      scrollEventBound = false,\n      lastPixelDepth = 0,\n      universalGA,\n      classicGA,\n      gaGlobal,\n      standardEventHandler;\n\n    /*\n     * Plugin\n     */\n\n    $.scrollDepth = function(options) {\n\n      var startTime = +new Date;\n\n      options = $.extend({}, defaults, options);\n\n      // Return early if document height is too small\n      if ( $(document).height() < options.minHeight ) {\n        return;\n      }\n\n      /*\n       * Determine which version of GA is being used\n       * \"ga\", \"__gaTracker\", _gaq\", and \"dataLayer\" are the possible globals\n       */\n\n      if (options.gaGlobal) {\n        universalGA = true;\n        gaGlobal = options.gaGlobal;\n      } else if (typeof ga === \"function\") {\n        universalGA = true;\n        gaGlobal = 'ga';\n      } else if (typeof __gaTracker === \"function\") {\n        universalGA = true;\n        gaGlobal = '__gaTracker';\n      }\n\n      if (typeof _gaq !== \"undefined\" && typeof _gaq.push === \"function\") {\n        classicGA = true;\n      }\n\n      if (typeof options.eventHandler === \"function\") {\n        standardEventHandler = options.eventHandler;\n      } else if (typeof dataLayer !== \"undefined\" && typeof dataLayer.push === \"function\" && !options.gtmOverride) {\n\n        standardEventHandler = function(data) {\n          dataLayer.push(data);\n        };\n      }\n\n      /*\n       * Functions\n       */\n\n      function sendEvent(action, label, scrollDistance, timing) {\n\n        if (standardEventHandler) {\n\n          standardEventHandler({'event': 'ScrollDistance', 'eventCategory': 'Scroll Depth', 'eventAction': action, 'eventLabel': label, 'eventValue': 1, 'eventNonInteraction': options.nonInteraction});\n\n          if (options.pixelDepth && arguments.length > 2 && scrollDistance > lastPixelDepth) {\n            lastPixelDepth = scrollDistance;\n            standardEventHandler({'event': 'ScrollDistance', 'eventCategory': 'Scroll Depth', 'eventAction': 'Pixel Depth', 'eventLabel': rounded(scrollDistance), 'eventValue': 1, 'eventNonInteraction': options.nonInteraction});\n          }\n\n          if (options.userTiming && arguments.length > 3) {\n            standardEventHandler({'event': 'ScrollTiming', 'eventCategory': 'Scroll Depth', 'eventAction': action, 'eventLabel': label, 'eventTiming': timing});\n          }\n\n        } else {\n\n          if (universalGA) {\n\n            window[gaGlobal]('send', 'event', 'Scroll Depth', action, label, 1, {'nonInteraction': options.nonInteraction});\n\n            if (options.pixelDepth && arguments.length > 2 && scrollDistance > lastPixelDepth) {\n              lastPixelDepth = scrollDistance;\n              window[gaGlobal]('send', 'event', 'Scroll Depth', 'Pixel Depth', rounded(scrollDistance), 1, {'nonInteraction': options.nonInteraction});\n            }\n\n            if (options.userTiming && arguments.length > 3) {\n              window[gaGlobal]('send', 'timing', 'Scroll Depth', action, timing, label);\n            }\n\n          }\n\n          if (classicGA) {\n\n            _gaq.push(['_trackEvent', 'Scroll Depth', action, label, 1, options.nonInteraction]);\n\n            if (options.pixelDepth && arguments.length > 2 && scrollDistance > lastPixelDepth) {\n              lastPixelDepth = scrollDistance;\n              _gaq.push(['_trackEvent', 'Scroll Depth', 'Pixel Depth', rounded(scrollDistance), 1, options.nonInteraction]);\n            }\n\n            if (options.userTiming && arguments.length > 3) {\n              _gaq.push(['_trackTiming', 'Scroll Depth', action, timing, label, 100]);\n            }\n\n          }\n\n        }\n\n      }\n\n      function calculateMarks(docHeight) {\n        return {\n          '25%' : parseInt(docHeight * 0.25, 10),\n          '50%' : parseInt(docHeight * 0.50, 10),\n          '75%' : parseInt(docHeight * 0.75, 10),\n          // Cushion to trigger 100% event in iOS\n          '100%': docHeight - 5\n        };\n      }\n\n      function checkMarks(marks, scrollDistance, timing) {\n        // Check each active mark\n        $.each(marks, function(key, val) {\n          if ( $.inArray(key, cache) === -1 && scrollDistance >= val ) {\n            sendEvent('Percentage', key, scrollDistance, timing);\n            cache.push(key);\n          }\n        });\n      }\n\n      function checkElements(elements, scrollDistance, timing) {\n        $.each(elements, function(index, elem) {\n          if ( $.inArray(elem, cache) === -1 && $(elem).length ) {\n            if ( scrollDistance >= $(elem).offset().top ) {\n              sendEvent('Elements', elem, scrollDistance, timing);\n              cache.push(elem);\n            }\n          }\n        });\n      }\n\n      function rounded(scrollDistance) {\n        // Returns String\n        return (Math.floor(scrollDistance/250) * 250).toString();\n      }\n\n      function init() {\n        bindScrollDepth();\n      }\n\n      /*\n       * Public Methods\n       */\n\n      // Reset Scroll Depth with the originally initialized options\n      $.scrollDepth.reset = function() {\n        cache = [];\n        lastPixelDepth = 0;\n        $window.off('scroll.scrollDepth');\n        bindScrollDepth();\n      };\n\n      // Add DOM elements to be tracked\n      $.scrollDepth.addElements = function(elems) {\n\n        if (typeof elems == \"undefined\" || !$.isArray(elems)) {\n          return;\n        }\n\n        $.merge(options.elements, elems);\n\n        // If scroll event has been unbound from window, rebind\n        if (!scrollEventBound) {\n          bindScrollDepth();\n        }\n\n      };\n\n      // Remove DOM elements currently tracked\n      $.scrollDepth.removeElements = function(elems) {\n\n        if (typeof elems == \"undefined\" || !$.isArray(elems)) {\n          return;\n        }\n\n        $.each(elems, function(index, elem) {\n\n          var inElementsArray = $.inArray(elem, options.elements);\n          var inCacheArray = $.inArray(elem, cache);\n\n          if (inElementsArray != -1) {\n            options.elements.splice(inElementsArray, 1);\n          }\n\n          if (inCacheArray != -1) {\n            cache.splice(inCacheArray, 1);\n          }\n\n        });\n\n      };\n\n      /*\n       * Throttle function borrowed from:\n       * Underscore.js 1.5.2\n       * http://underscorejs.org\n       * (c) 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors\n       * Underscore may be freely distributed under the MIT license.\n       */\n\n      function throttle(func, wait) {\n        var context, args, result;\n        var timeout = null;\n        var previous = 0;\n        var later = function() {\n          previous = new Date;\n          timeout = null;\n          result = func.apply(context, args);\n        };\n        return function() {\n          var now = new Date;\n          if (!previous) previous = now;\n          var remaining = wait - (now - previous);\n          context = this;\n          args = arguments;\n          if (remaining <= 0) {\n            clearTimeout(timeout);\n            timeout = null;\n            previous = now;\n            result = func.apply(context, args);\n          } else if (!timeout) {\n            timeout = setTimeout(later, remaining);\n          }\n          return result;\n        };\n      }\n\n      /*\n       * Scroll Event\n       */\n\n      function bindScrollDepth() {\n\n        scrollEventBound = true;\n\n        $window.on('scroll.scrollDepth', throttle(function() {\n          /*\n           * We calculate document and window height on each scroll event to\n           * account for dynamic DOM changes.\n           */\n\n          var docHeight = $(document).height(),\n            winHeight = window.innerHeight ? window.innerHeight : $window.height(),\n            scrollDistance = $window.scrollTop() + winHeight,\n\n            // Recalculate percentage marks\n            marks = calculateMarks(docHeight),\n\n            // Timing\n            timing = +new Date - startTime;\n\n          // If all marks already hit, unbind scroll event\n          if (cache.length >= options.elements.length + (options.percentage ? 4:0)) {\n            $window.off('scroll.scrollDepth');\n            scrollEventBound = false;\n            return;\n          }\n\n          // Check specified DOM elements\n          if (options.elements) {\n            checkElements(options.elements, scrollDistance, timing);\n          }\n\n          // Check standard marks\n          if (options.percentage) {\n            checkMarks(marks, scrollDistance, timing);\n          }\n        }, 500));\n\n      }\n\n      init();\n\n    };\n\n}));\njQuery.scrollDepth();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "0",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
                 "tagId": "24",
                 "name": "LISTENER YouTube Events",
                 "type": "html",
@@ -456,6 +508,81 @@
                 "firingTriggerId": [
                     "18"
                 ]
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "tagId": "27",
+                "name": "TRACK Scroll Distance",
+                "type": "ua",
+                "liveOnly": false,
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "nonInteraction",
+                        "value": "{{ScrollDepthEventNonInteraction}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setTrackerName",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventValue",
+                        "value": "{{ScrollDepthEventValue}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "{{ScrollDepthEventCategory}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "{{ScrollDepthEventAction}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventLabel",
+                        "value": "{{ScrollDepthEventLabel}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{Google Analytics UA}}"
+                    }
+                ],
+                "fingerprint": "0",
+                "firingTriggerId": [
+                    "40"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
             },
             {
                 "accountId": "21731876",
@@ -900,6 +1027,31 @@
                     }
                 ],
                 "fingerprint": "1430419563927"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "40",
+                "name": "ScrollDistance",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "ScrollDistance"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1463162477022"
             },
             {
                 "accountId": "21731876",
@@ -1571,6 +1723,131 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
+                "variableId": "67",
+                "name": "ScrollDepthEventAction",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventAction"
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "66",
+                "name": "ScrollDepthEventCategory",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventCategory"
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "68",
+                "name": "ScrollDepthEventLabel",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventLabel"
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "70",
+                "name": "ScrollDepthEventNonInteraction",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventNonInteraction"
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "69",
+                "name": "ScrollDepthEventValue",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventValue"
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
                 "variableId": "64",
                 "name": "YouTube is Present",
                 "type": "jsm",
@@ -1950,6 +2227,31 @@
                         "type": "TEMPLATE",
                         "key": "name",
                         "value": "virtualPageURL"
+                    }
+                ],
+                "fingerprint": "0"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "variableId": "65",
+                "name": "visitorId",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "visitorId"
                     }
                 ],
                 "fingerprint": "0"

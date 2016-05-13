@@ -19,7 +19,7 @@ Our stock configuration includes configuration to track the following:
 
 * Basic Google Analytics pageviews
 * Events from our custom VIA.Event and VIA.VirtualPageView
-* Outbound, email and download click events
+* Many handy events: outbound, downloand and email clicks, YouTube tracking, Scroll Depth tracking
 
 ### Custom VIA.Event and VIA.VirtualPageViews Events
 
@@ -49,9 +49,15 @@ dataLayer.push({
      });
 ```
 
-### Outbound, email and download events
+### User ID tracking
 
-#### Outbound
+If you are using DuracellTomi's Google Tag Manager plugin for Wordpress, you can enable User ID tracking under Settings > Google Tag Manager > Basic Data > Visitors > Logged in User ID. This will automatically send the user ID data needed to track User ID in Google Analytics.
+
+You will also need to enable User ID in your Google Analytics Property.
+
+### Other Handy Events
+
+#### Outbound Link Clicks
 
 Any click that goes to a URL that does not have your domain name will fire an event to Google Analytics:
 
@@ -63,7 +69,7 @@ Label: {{url path}} (page on site where click occurred)
 
 Note: You need to change the "outbound link click" trigger to test against your own domain. By default, it is set to viastudio.com
 
-#### Email 
+#### Email
 
 Any click that goes to a URL that begins with "mailto:" will fire an event to Google Analytics:
 
@@ -75,10 +81,10 @@ Label: {{url path}} (page on site where click occurred)
 
 #### Download
 
-Any click that goes to a path that matches the following Regex: \.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|gz|tar)$ 
+Any click that goes to a path that matches the following Regex: \.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|gz|tar)$
 ... will fire an event to Google Analytics:
 
-Category: File Download 
+Category: File Download
 
 Action: {{element url}}
 
@@ -95,3 +101,36 @@ Action: 'play', 'pause', 0%, 25%, 50%, 75%, 90%, 100%
 Label: title of video
 
 Adapted from this article: http://www.cardinalpath.com/youtube-video-tracking-with-google-tag-manager-v2-and-universal-analytics-a-step-by-step-guide/
+
+#### Scroll Tracking
+
+By default, we use @robflaherty's Scroll Depth plugin (v0.9.1), which will automatically send scroll events:
+
+Category: ScrollDistance
+
+Action: Percentage | Pixel Depth
+
+Label: xy% | # of pixels
+
+Code:
+http://scrolldepth.parsnip.io/
+
+Implementation: http://andygibson.us/2013/10/track-scroll-depth-using-google-tag-manager/
+
+Optionally, if you enable DuracellTomi's Google Tag Manager plugin option "Scroll Tracking" you will also receive:
+
+**Scroll Percentage**
+
+Category: Scroll Tracking
+
+Action: Scroll
+
+Label: xy%
+
+**Reader Type**
+
+Category: Scroll Tracking
+
+Action: Reader Type
+
+Label: reader | scanner
