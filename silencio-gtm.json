@@ -1,30 +1,25 @@
 {
-    "exportFormatVersion": 1.3,
-    "exportTime": "2016-05-13 19:19:14",
+    "exportFormatVersion": 2,
+    "exportTime": "2017-03-07 15:25:58",
     "containerVersion": {
+        "path": "accounts/21731876/containers/1175712/versions/8",
         "accountId": "21731876",
         "containerId": "1175712",
-        "containerVersionId": "0",
-        "deleted": false,
+        "containerVersionId": "8",
+        "name": "20170307",
+        "notes": "- fixed YouTube Event tag to fire on YouTube Event (duh) instead of YouTube is Present (d'oh!)",
         "container": {
+            "path": "accounts/21731876/containers/1175712",
             "accountId": "21731876",
             "containerId": "1175712",
             "name": "Silencio GTM Bootstrap",
             "publicId": "GTM-WF7D5G",
-            "timeZoneCountryId": "US",
-            "timeZoneId": "America/Los_Angeles",
             "notes": "- UserID tracking: added visitorId datalayer variable and added &uid -> {{visitorId}} in GA tag \"fields to set\"",
             "usageContext": [
                 "WEB"
             ],
-            "fingerprint": "1463167146155",
-            "enabledBuiltInVariable": [
-                "PAGE_URL",
-                "REFERRER",
-                "PAGE_HOSTNAME",
-                "EVENT",
-                "PAGE_PATH"
-            ]
+            "fingerprint": "1488900306403",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/21731876/containers/1175712/workspaces?apiLink=container"
         },
         "tag": [
             {
@@ -33,7 +28,6 @@
                 "tagId": "12",
                 "name": "ANALYTICS - 404 tracking",
                 "type": "ua",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "BOOLEAN",
@@ -86,7 +80,7 @@
                         "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1429296237408",
                 "firingTriggerId": [
                     "19"
                 ]
@@ -97,7 +91,6 @@
                 "tagId": "13",
                 "name": "ANALYTICS - GA Universal",
                 "type": "ua",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "BOOLEAN",
@@ -166,7 +159,7 @@
                         "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1463162211009",
                 "firingTriggerId": [
                     "2147479553"
                 ],
@@ -178,7 +171,6 @@
                 "tagId": "14",
                 "name": "ANALYTICS - GA Universal VIA.Event",
                 "type": "ua",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "BOOLEAN",
@@ -236,7 +228,7 @@
                         "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1429296237409",
                 "firingTriggerId": [
                     "20"
                 ]
@@ -247,7 +239,6 @@
                 "tagId": "15",
                 "name": "ANALYTICS - GA Universal VirtualPageview",
                 "type": "ua",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "BOOLEAN",
@@ -326,7 +317,7 @@
                         "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1430419524886",
                 "firingTriggerId": [
                     "21"
                 ]
@@ -337,7 +328,6 @@
                 "tagId": "26",
                 "name": "LISTENER Scroll Depth Percentage",
                 "type": "html",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "TEMPLATE",
@@ -350,7 +340,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1463166268342",
                 "firingTriggerId": [
                     "2147479553"
                 ],
@@ -362,7 +352,6 @@
                 "tagId": "24",
                 "name": "LISTENER YouTube Events",
                 "type": "html",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "TEMPLATE",
@@ -375,7 +364,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1456266828548",
                 "firingTriggerId": [
                     "39"
                 ],
@@ -387,7 +376,6 @@
                 "tagId": "18",
                 "name": "TRACK File downloads",
                 "type": "ua",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "BOOLEAN",
@@ -440,7 +428,7 @@
                         "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1431533736267",
                 "firingTriggerId": [
                     "34"
                 ]
@@ -451,7 +439,6 @@
                 "tagId": "19",
                 "name": "TRACK Form Submissions",
                 "type": "ua",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "BOOLEAN",
@@ -504,7 +491,7 @@
                         "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1429296237412",
                 "firingTriggerId": [
                     "18"
                 ]
@@ -515,7 +502,6 @@
                 "tagId": "27",
                 "name": "TRACK Scroll Distance",
                 "type": "ua",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "TEMPLATE",
@@ -578,7 +564,7 @@
                         "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1463164515058",
                 "firingTriggerId": [
                     "40"
                 ],
@@ -590,7 +576,6 @@
                 "tagId": "20",
                 "name": "TRACK Scroll Tracking - Reader Type",
                 "type": "ua",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "BOOLEAN",
@@ -638,7 +623,7 @@
                         "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1429296237413",
                 "firingTriggerId": [
                     "29"
                 ]
@@ -649,7 +634,6 @@
                 "tagId": "21",
                 "name": "TRACK Scroll Tracking - Scroll Distance",
                 "type": "ua",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "BOOLEAN",
@@ -702,7 +686,7 @@
                         "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1429296237414",
                 "firingTriggerId": [
                     "28",
                     "27",
@@ -715,7 +699,6 @@
                 "tagId": "25",
                 "name": "TRACK YouTube Events",
                 "type": "ua",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "BOOLEAN",
@@ -799,9 +782,9 @@
                         "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1488900312478",
                 "firingTriggerId": [
-                    "39"
+                    "42"
                 ],
                 "tagFiringOption": "ONCE_PER_EVENT"
             },
@@ -811,7 +794,6 @@
                 "tagId": "23",
                 "name": "TRACK email clicks",
                 "type": "ua",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "BOOLEAN",
@@ -864,7 +846,7 @@
                         "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1431532992099",
                 "firingTriggerId": [
                     "33"
                 ],
@@ -876,7 +858,6 @@
                 "tagId": "22",
                 "name": "TRACK outbound link clicks",
                 "type": "ua",
-                "liveOnly": false,
                 "parameter": [
                     {
                         "type": "BOOLEAN",
@@ -929,13 +910,12 @@
                         "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "0",
+                "fingerprint": "1431533759833",
                 "firingTriggerId": [
                     "35"
                 ]
             }
         ],
-        "fingerprint": "0",
         "trigger": [
             {
                 "accountId": "21731876",
@@ -969,8 +949,7 @@
                 "name": "Form Submissions",
                 "type": "FORM_SUBMISSION",
                 "waitForTags": {
-                    "type": "TEMPLATE",
-                    "value": ""
+                    "type": "TEMPLATE"
                 },
                 "checkValidation": {
                     "type": "BOOLEAN",
@@ -981,8 +960,7 @@
                     "value": "2000"
                 },
                 "uniqueTriggerId": {
-                    "type": "TEMPLATE",
-                    "value": ""
+                    "type": "TEMPLATE"
                 },
                 "fingerprint": "1429296237398"
             },
@@ -1110,6 +1088,31 @@
                 "name": "Wait for DOM Load",
                 "type": "DOM_READY",
                 "fingerprint": "1429296237399"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "triggerId": "42",
+                "name": "YouTube Event",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "youtube"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1488900306403"
             },
             {
                 "accountId": "21731876",
@@ -1554,7 +1557,7 @@
                         "value": "page not found"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296278741"
             },
             {
                 "accountId": "21731876",
@@ -1579,7 +1582,7 @@
                         "value": "HOST"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1431119857186"
             },
             {
                 "accountId": "21731876",
@@ -1603,7 +1606,7 @@
                         "key": "defaultPages"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1431119829550"
             },
             {
                 "accountId": "21731876",
@@ -1623,7 +1626,7 @@
                         "value": "eventAction"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237403"
             },
             {
                 "accountId": "21731876",
@@ -1643,7 +1646,7 @@
                         "value": "eventCategory"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237403"
             },
             {
                 "accountId": "21731876",
@@ -1663,7 +1666,7 @@
                         "value": "eventInteraction"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237403"
             },
             {
                 "accountId": "21731876",
@@ -1683,7 +1686,7 @@
                         "value": "eventLabel"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237403"
             },
             {
                 "accountId": "21731876",
@@ -1703,7 +1706,7 @@
                         "value": "eventValue"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237403"
             },
             {
                 "accountId": "21731876",
@@ -1715,10 +1718,10 @@
                     {
                         "type": "TEMPLATE",
                         "key": "value",
-                        "value": "UA-xxxxxxxx-1"
+                        "value": "UA-53211420-2"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1463166769830"
             },
             {
                 "accountId": "21731876",
@@ -1743,7 +1746,7 @@
                         "value": "eventAction"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1463164420526"
             },
             {
                 "accountId": "21731876",
@@ -1768,7 +1771,7 @@
                         "value": "eventCategory"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1463164407244"
             },
             {
                 "accountId": "21731876",
@@ -1793,7 +1796,7 @@
                         "value": "eventLabel"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1463164432399"
             },
             {
                 "accountId": "21731876",
@@ -1818,7 +1821,7 @@
                         "value": "eventNonInteraction"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1463164465073"
             },
             {
                 "accountId": "21731876",
@@ -1843,7 +1846,7 @@
                         "value": "eventValue"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1463164449648"
             },
             {
                 "accountId": "21731876",
@@ -1858,7 +1861,7 @@
                         "value": "// Return \"true\" if there is at least one YouTube video on the page\nfunction () {\n   for (var e = document.getElementsByTagName('iframe'), x = e.length; x--;)\n   if (/youtube.com\\/embed/.test(e[x].src)){\n      return true;\n   }\n   return false;\n}"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1456266719069"
             },
             {
                 "accountId": "21731876",
@@ -1873,7 +1876,7 @@
                         "value": "ELEMENT"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237401"
             },
             {
                 "accountId": "21731876",
@@ -1888,7 +1891,7 @@
                         "value": "function() {\n  var el = {{element}};\n  while (el && el !== document.body && el.id !== 'menu-primary') {\n    el = el.parentElement;\n  }\n  return el.id === 'menu-primary';\n}"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237402"
             },
             {
                 "accountId": "21731876",
@@ -1903,7 +1906,7 @@
                         "value": "function() {\n  var el = {{element}};\n  while (el && el !== document.body && el.id !== 'secondary') {\n    el = el.parentElement;\n  }\n  return el.id === 'secondary';\n}"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237402"
             },
             {
                 "accountId": "21731876",
@@ -1918,7 +1921,7 @@
                         "value": "CLASSES"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237399"
             },
             {
                 "accountId": "21731876",
@@ -1933,7 +1936,7 @@
                         "value": "ID"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237404"
             },
             {
                 "accountId": "21731876",
@@ -1948,7 +1951,7 @@
                         "value": "TARGET"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237404"
             },
             {
                 "accountId": "21731876",
@@ -1963,7 +1966,7 @@
                         "value": "TEXT"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237404"
             },
             {
                 "accountId": "21731876",
@@ -1978,7 +1981,7 @@
                         "value": "URL"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237404"
             },
             {
                 "accountId": "21731876",
@@ -1986,7 +1989,7 @@
                 "variableId": "47",
                 "name": "event",
                 "type": "e",
-                "fingerprint": "0"
+                "fingerprint": "1429296237405"
             },
             {
                 "accountId": "21731876",
@@ -2001,7 +2004,7 @@
                         "value": "HISTORY_CHANGE_SOURCE"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237405"
             },
             {
                 "accountId": "21731876",
@@ -2016,7 +2019,7 @@
                         "value": "HISTORY_NEW_STATE"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237405"
             },
             {
                 "accountId": "21731876",
@@ -2031,7 +2034,7 @@
                         "value": "HISTORY_NEW_URL_FRAGMENT"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237405"
             },
             {
                 "accountId": "21731876",
@@ -2046,7 +2049,7 @@
                         "value": "HISTORY_OLD_STATE"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237405"
             },
             {
                 "accountId": "21731876",
@@ -2061,7 +2064,7 @@
                         "value": "HISTORY_OLD_URL_FRAGMENT"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237406"
             },
             {
                 "accountId": "21731876",
@@ -2081,7 +2084,7 @@
                         "value": "linkhref"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237406"
             },
             {
                 "accountId": "21731876",
@@ -2096,7 +2099,7 @@
                         "value": "document.title"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237398"
             },
             {
                 "accountId": "21731876",
@@ -2116,7 +2119,7 @@
                         "value": "readerType"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237406"
             },
             {
                 "accountId": "21731876",
@@ -2124,7 +2127,7 @@
                 "variableId": "55",
                 "name": "referrer",
                 "type": "f",
-                "fingerprint": "0"
+                "fingerprint": "1429296237406"
             },
             {
                 "accountId": "21731876",
@@ -2144,7 +2147,7 @@
                         "value": "timeToScroll"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237406"
             },
             {
                 "accountId": "21731876",
@@ -2159,7 +2162,7 @@
                         "value": "URL"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237398"
             },
             {
                 "accountId": "21731876",
@@ -2174,7 +2177,7 @@
                         "value": "HOST"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237406"
             },
             {
                 "accountId": "21731876",
@@ -2189,7 +2192,7 @@
                         "value": "PATH"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237407"
             },
             {
                 "accountId": "21731876",
@@ -2209,7 +2212,7 @@
                         "value": "virtualPageTitle"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237407"
             },
             {
                 "accountId": "21731876",
@@ -2229,7 +2232,7 @@
                         "value": "virtualPageURL"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1429296237407"
             },
             {
                 "accountId": "21731876",
@@ -2254,8 +2257,42 @@
                         "value": "visitorId"
                     }
                 ],
-                "fingerprint": "0"
+                "fingerprint": "1463162171076"
             }
-        ]
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "21731876",
+                "containerId": "1175712",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1488900346874",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/21731876/containers/1175712/versions/8?apiLink=version"
     }
 }
