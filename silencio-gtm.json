@@ -1,13 +1,13 @@
 {
     "exportFormatVersion": 2,
-    "exportTime": "2017-03-07 15:25:58",
+    "exportTime": "2018-02-08 15:34:32",
     "containerVersion": {
-        "path": "accounts/21731876/containers/1175712/versions/8",
+        "path": "accounts/21731876/containers/1175712/versions/9",
         "accountId": "21731876",
         "containerId": "1175712",
-        "containerVersionId": "8",
-        "name": "20170307",
-        "notes": "- fixed YouTube Event tag to fire on YouTube Event (duh) instead of YouTube is Present (d'oh!)",
+        "containerVersionId": "9",
+        "name": "20180208",
+        "description": "Remove Google Analytics UA variable in favor of new Google Analytics Settings variable",
         "container": {
             "path": "accounts/21731876/containers/1175712",
             "accountId": "21731876",
@@ -18,14 +18,14 @@
             "usageContext": [
                 "WEB"
             ],
-            "fingerprint": "1488900306403",
+            "fingerprint": "1518104046362",
             "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/21731876/containers/1175712/workspaces?apiLink=container"
         },
         "tag": [
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "12",
+                "tagId": "28",
                 "name": "ANALYTICS - 404 tracking",
                 "type": "ua",
                 "parameter": [
@@ -36,12 +36,7 @@
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "doubleClick",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "useDebugVersion",
+                        "key": "overrideGaSettings",
                         "value": "false"
                     },
                     {
@@ -55,9 +50,9 @@
                         "value": "TRACK_EVENT"
                     },
                     {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{Google Analytics Settings}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -68,69 +63,23 @@
                         "type": "TEMPLATE",
                         "key": "eventLabel",
                         "value": "{{Referrer}}"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "1429296237408",
+                "fingerprint": "1518104046352",
                 "firingTriggerId": [
-                    "19"
+                    "45"
                 ]
             },
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "13",
+                "tagId": "29",
                 "name": "ANALYTICS - GA Universal",
                 "type": "ua",
                 "parameter": [
                     {
                         "type": "BOOLEAN",
-                        "key": "doubleClick",
-                        "value": "true"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "setTrackerName",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "useDebugVersion",
-                        "value": "false"
-                    },
-                    {
-                        "type": "LIST",
-                        "key": "fieldsToSet",
-                        "list": [
-                            {
-                                "type": "MAP",
-                                "map": [
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "fieldName",
-                                        "value": "&uid"
-                                    },
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "value",
-                                        "value": "{{visitorId}}"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "useHashAutoLink",
+                        "key": "overrideGaSettings",
                         "value": "false"
                     },
                     {
@@ -139,27 +88,12 @@
                         "value": "TRACK_PAGEVIEW"
                     },
                     {
-                        "type": "BOOLEAN",
-                        "key": "decorateFormsAutoLink",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
                         "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
+                        "key": "gaSettings",
+                        "value": "{{Google Analytics Settings}}"
                     }
                 ],
-                "fingerprint": "1463162211009",
+                "fingerprint": "1518104046353",
                 "firingTriggerId": [
                     "2147479553"
                 ],
@@ -168,7 +102,7 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "14",
+                "tagId": "30",
                 "name": "ANALYTICS - GA Universal VIA.Event",
                 "type": "ua",
                 "parameter": [
@@ -179,12 +113,7 @@
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "doubleClick",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "useDebugVersion",
+                        "key": "overrideGaSettings",
                         "value": "false"
                     },
                     {
@@ -203,9 +132,9 @@
                         "value": "TRACK_EVENT"
                     },
                     {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{Google Analytics Settings}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -216,19 +145,9 @@
                         "type": "TEMPLATE",
                         "key": "eventLabel",
                         "value": "{{Event Label}}"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "1429296237409",
+                "fingerprint": "1518104046354",
                 "firingTriggerId": [
                     "20"
                 ]
@@ -236,55 +155,14 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "15",
+                "tagId": "31",
                 "name": "ANALYTICS - GA Universal VirtualPageview",
                 "type": "ua",
                 "parameter": [
                     {
                         "type": "BOOLEAN",
-                        "key": "doubleClick",
+                        "key": "overrideGaSettings",
                         "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "useDebugVersion",
-                        "value": "false"
-                    },
-                    {
-                        "type": "LIST",
-                        "key": "fieldsToSet",
-                        "list": [
-                            {
-                                "type": "MAP",
-                                "map": [
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "fieldName",
-                                        "value": "page"
-                                    },
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "value",
-                                        "value": "{{virtualPageURL}}"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "MAP",
-                                "map": [
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "fieldName",
-                                        "value": "title"
-                                    },
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "value",
-                                        "value": "{{virtualPageTitle}}"
-                                    }
-                                ]
-                            }
-                        ]
                     },
                     {
                         "type": "TEMPLATE",
@@ -292,32 +170,12 @@
                         "value": "TRACK_PAGEVIEW"
                     },
                     {
-                        "type": "BOOLEAN",
-                        "key": "useHashAutoLink",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "decorateFormsAutoLink",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
                         "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
+                        "key": "gaSettings",
+                        "value": "{{Google Analytics Settings}}"
                     }
                 ],
-                "fingerprint": "1430419524886",
+                "fingerprint": "1518104046354",
                 "firingTriggerId": [
                     "21"
                 ]
@@ -349,7 +207,7 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "24",
+                "tagId": "32",
                 "name": "LISTENER YouTube Events",
                 "type": "html",
                 "parameter": [
@@ -364,16 +222,16 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1456266828548",
+                "fingerprint": "1518104046355",
                 "firingTriggerId": [
-                    "39"
+                    "48"
                 ],
                 "tagFiringOption": "ONCE_PER_EVENT"
             },
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "18",
+                "tagId": "33",
                 "name": "TRACK File downloads",
                 "type": "ua",
                 "parameter": [
@@ -384,12 +242,7 @@
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "doubleClick",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "useDebugVersion",
+                        "key": "overrideGaSettings",
                         "value": "false"
                     },
                     {
@@ -403,9 +256,9 @@
                         "value": "TRACK_EVENT"
                     },
                     {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{Google Analytics Settings}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -416,27 +269,17 @@
                         "type": "TEMPLATE",
                         "key": "eventLabel",
                         "value": "{{url path}}"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "1431533736267",
+                "fingerprint": "1518104046356",
                 "firingTriggerId": [
-                    "34"
+                    "49"
                 ]
             },
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "19",
+                "tagId": "34",
                 "name": "TRACK Form Submissions",
                 "type": "ua",
                 "parameter": [
@@ -447,12 +290,7 @@
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "doubleClick",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "useDebugVersion",
+                        "key": "overrideGaSettings",
                         "value": "false"
                     },
                     {
@@ -466,9 +304,9 @@
                         "value": "TRACK_EVENT"
                     },
                     {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{Google Analytics Settings}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -479,19 +317,9 @@
                         "type": "TEMPLATE",
                         "key": "eventLabel",
                         "value": "{{element url}}"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "1429296237412",
+                "fingerprint": "1518104046357",
                 "firingTriggerId": [
                     "18"
                 ]
@@ -499,7 +327,7 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "27",
+                "tagId": "35",
                 "name": "TRACK Scroll Distance",
                 "type": "ua",
                 "parameter": [
@@ -510,17 +338,7 @@
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "doubleClick",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "setTrackerName",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "useDebugVersion",
+                        "key": "overrideGaSettings",
                         "value": "false"
                     },
                     {
@@ -539,9 +357,9 @@
                         "value": "TRACK_EVENT"
                     },
                     {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{Google Analytics Settings}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -552,28 +370,18 @@
                         "type": "TEMPLATE",
                         "key": "eventLabel",
                         "value": "{{ScrollDepthEventLabel}}"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "1463164515058",
+                "fingerprint": "1518104046358",
                 "firingTriggerId": [
-                    "40"
+                    "46"
                 ],
                 "tagFiringOption": "ONCE_PER_EVENT"
             },
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "20",
+                "tagId": "36",
                 "name": "TRACK Scroll Tracking - Reader Type",
                 "type": "ua",
                 "parameter": [
@@ -584,7 +392,7 @@
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "useDebugVersion",
+                        "key": "overrideGaSettings",
                         "value": "false"
                     },
                     {
@@ -598,9 +406,9 @@
                         "value": "TRACK_EVENT"
                     },
                     {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{Google Analytics Settings}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -611,19 +419,9 @@
                         "type": "TEMPLATE",
                         "key": "eventLabel",
                         "value": "{{readerType}}"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "1429296237413",
+                "fingerprint": "1518104046358",
                 "firingTriggerId": [
                     "29"
                 ]
@@ -631,7 +429,7 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "21",
+                "tagId": "37",
                 "name": "TRACK Scroll Tracking - Scroll Distance",
                 "type": "ua",
                 "parameter": [
@@ -642,7 +440,7 @@
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "useDebugVersion",
+                        "key": "overrideGaSettings",
                         "value": "false"
                     },
                     {
@@ -661,9 +459,9 @@
                         "value": "TRACK_EVENT"
                     },
                     {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{Google Analytics Settings}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -674,29 +472,19 @@
                         "type": "TEMPLATE",
                         "key": "eventLabel",
                         "value": "{{event}}"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "1429296237414",
+                "fingerprint": "1518104046359",
                 "firingTriggerId": [
-                    "28",
                     "27",
+                    "28",
                     "30"
                 ]
             },
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "25",
+                "tagId": "38",
                 "name": "TRACK YouTube Events",
                 "type": "ua",
                 "parameter": [
@@ -707,8 +495,13 @@
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "useDebugVersion",
+                        "key": "overrideGaSettings",
                         "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventValue",
+                        "value": "{{Event Value}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -722,6 +515,11 @@
                     },
                     {
                         "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{Google Analytics Settings}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
                         "key": "eventAction",
                         "value": "{{Event Action}}"
                     },
@@ -729,69 +527,18 @@
                         "type": "TEMPLATE",
                         "key": "eventLabel",
                         "value": "{{Event Label}}"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "doubleClick",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "setTrackerName",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "eventValue",
-                        "value": "{{Event Value}}"
-                    },
-                    {
-                        "type": "LIST",
-                        "key": "fieldsToSet",
-                        "list": [
-                            {
-                                "type": "MAP",
-                                "map": [
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "fieldName",
-                                        "value": "useBeacon"
-                                    },
-                                    {
-                                        "type": "TEMPLATE",
-                                        "key": "value",
-                                        "value": "true"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "1488900312478",
+                "fingerprint": "1518104046360",
                 "firingTriggerId": [
-                    "42"
+                    "47"
                 ],
                 "tagFiringOption": "ONCE_PER_EVENT"
             },
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "23",
+                "tagId": "39",
                 "name": "TRACK email clicks",
                 "type": "ua",
                 "parameter": [
@@ -802,12 +549,7 @@
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "doubleClick",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "useDebugVersion",
+                        "key": "overrideGaSettings",
                         "value": "false"
                     },
                     {
@@ -821,9 +563,9 @@
                         "value": "TRACK_EVENT"
                     },
                     {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{Google Analytics Settings}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -834,28 +576,18 @@
                         "type": "TEMPLATE",
                         "key": "eventLabel",
                         "value": "{{url path}}"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "1431532992099",
+                "fingerprint": "1518104046361",
                 "firingTriggerId": [
-                    "33"
+                    "50"
                 ],
                 "tagFiringOption": "UNLIMITED"
             },
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "tagId": "22",
+                "tagId": "40",
                 "name": "TRACK outbound link clicks",
                 "type": "ua",
                 "parameter": [
@@ -866,12 +598,7 @@
                     },
                     {
                         "type": "BOOLEAN",
-                        "key": "doubleClick",
-                        "value": "false"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "useDebugVersion",
+                        "key": "overrideGaSettings",
                         "value": "false"
                     },
                     {
@@ -885,9 +612,9 @@
                         "value": "TRACK_EVENT"
                     },
                     {
-                        "type": "BOOLEAN",
-                        "key": "enableLinkId",
-                        "value": "false"
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{Google Analytics Settings}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -898,21 +625,11 @@
                         "type": "TEMPLATE",
                         "key": "eventLabel",
                         "value": "{{url path}}"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "enableEcommerce",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "trackingId",
-                        "value": "{{Google Analytics UA}}"
                     }
                 ],
-                "fingerprint": "1431533759833",
+                "fingerprint": "1518104046362",
                 "firingTriggerId": [
-                    "35"
+                    "51"
                 ]
             }
         ],
@@ -967,7 +684,7 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "triggerId": "19",
+                "triggerId": "45",
                 "name": "Page Title starts with Page Not Found",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -1004,12 +721,12 @@
                         ]
                     }
                 ],
-                "fingerprint": "1430419563927"
+                "fingerprint": "1518104046340"
             },
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "triggerId": "40",
+                "triggerId": "46",
                 "name": "ScrollDistance",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -1029,7 +746,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "1463162477022"
+                "fingerprint": "1518104046340"
             },
             {
                 "accountId": "21731876",
@@ -1092,7 +809,7 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "triggerId": "42",
+                "triggerId": "47",
                 "name": "YouTube Event",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -1112,12 +829,12 @@
                         ]
                     }
                 ],
-                "fingerprint": "1488900306403"
+                "fingerprint": "1518104046340"
             },
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "triggerId": "39",
+                "triggerId": "48",
                 "name": "YouTube is Present",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
@@ -1154,7 +871,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "1456266754478"
+                "fingerprint": "1518104046341"
             },
             {
                 "accountId": "21731876",
@@ -1201,7 +918,7 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "triggerId": "34",
+                "triggerId": "49",
                 "name": "download link click",
                 "type": "CLICK",
                 "filter": [
@@ -1226,12 +943,12 @@
                         ]
                     }
                 ],
-                "fingerprint": "1431533025230"
+                "fingerprint": "1518104046342"
             },
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "triggerId": "33",
+                "triggerId": "50",
                 "name": "email link click",
                 "type": "CLICK",
                 "filter": [
@@ -1251,7 +968,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "1431533035109"
+                "fingerprint": "1518104046342"
             },
             {
                 "accountId": "21731876",
@@ -1473,7 +1190,7 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "triggerId": "35",
+                "triggerId": "51",
                 "name": "outbound link click",
                 "type": "CLICK",
                 "filter": [
@@ -1498,7 +1215,7 @@
                         ]
                     }
                 ],
-                "fingerprint": "1431533043438"
+                "fingerprint": "1518104046344"
             },
             {
                 "accountId": "21731876",
@@ -1711,17 +1428,57 @@
             {
                 "accountId": "21731876",
                 "containerId": "1175712",
-                "variableId": "42",
-                "name": "Google Analytics UA",
-                "type": "c",
+                "variableId": "71",
+                "name": "Google Analytics Settings",
+                "type": "gas",
                 "parameter": [
                     {
                         "type": "TEMPLATE",
-                        "key": "value",
-                        "value": "UA-xxxxxxxx-y"
+                        "key": "cookieDomain",
+                        "value": "auto"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setTrackerName",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useHashAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decorateFormsAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "UA-12345-1"
                     }
                 ],
-                "fingerprint": "1463166769830"
+                "fingerprint": "1518104046347"
             },
             {
                 "accountId": "21731876",
@@ -2292,7 +2049,7 @@
                 "name": "Event"
             }
         ],
-        "fingerprint": "1488900346874",
-        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/21731876/containers/1175712/versions/8?apiLink=version"
+        "fingerprint": "1518104062467",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/21731876/containers/1175712/versions/9?apiLink=version"
     }
 }
