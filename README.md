@@ -9,7 +9,7 @@ https://github.com/viastudio/Silencio
 
 1. Create a new Google Tag Manager (v2) container
 2. Download and import https://github.com/benATvia/silencio-gtm/blob/master/silencio-gtm.json into this container (Container > Admin > Import Container)
-3. Add your Google Analytics UA identifier to the config, by changing the {{Google Analytics UA}} variable under "Variables"
+3. Add your Google Analytics UA identifier to the config, by changing the {{Google Analytics Settings}} variable under "Variables"
 
 Voila!
 
